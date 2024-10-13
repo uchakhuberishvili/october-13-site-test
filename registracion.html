@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Website!</title>
+    <style>
+        body {
+            background-color: rgb(54, 37, 37);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+        }
+        .parent {
+            border: 5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(50, 90, 62);
+            width: 900px;
+            height: 600px;
+            border-radius: 35px;
+            overflow: hidden;
+            position: relative;
+        }
+        .parent .image-div {
+            border: 5px solid black;
+            background-image: url('goa.jpg');
+            background-size: cover;
+            width: 500px;
+            height: 600px;
+            border-radius: 35px 0 0 35px;
+        }
+        .parent .form-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+            padding: 20px;
+        }
+        input, select {
+            border: 2px solid black;
+            margin-top: 20px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            width: 300px;
+            height: 45px;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: 0.25s;
+        }
+        input:hover, select:hover {
+            width: 350px;
+            height: 60px;
+        }
+        .yo {
+            display: inline-block; 
+            line-height: 30px; 
+            text-decoration: none; 
+            font-size: 16px; 
+            color: rgb(179, 208, 233);
+            width: 300px;
+            height: 40px;
+            margin-top: 10px;
+            background-color: rgb(35, 45, 184);
+            border-radius: 3px;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: 0.25s;
+            text-align: center;
+        }
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 35px;
+        }
+        .goa {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(2, 34, 1);
+            border: 3px solid black;
+            background-color: gray;
+            margin-bottom: 20px;
+        }
+        .sign {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="parent">
+            <div class="image-div"></div>
+            <div class="form-div">
+                <form id="signupForm">
+                    <h2 class="goa">Goal Oriented Academy</h2>
+                    <h1 class="sign">Sign Up</h1>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <select id="role">
+                        <option value="viewer">Viewer</option>
+                        <option value="editor">Editor</option>
+                    </select>
+                    <button class="yo" type="button" onclick="signUp()">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="site.js"></script>
+</body>
+</html>
